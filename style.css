@@ -1,0 +1,24 @@
+.navbar {
+    border-bottom: #008ed6 3px solid;
+    opacity: 0.8;
+}
+
+#new-books{
+    min-height:3000px;
+    /* background-color:#00bfff */
+}
+
+#best-seller-book{ 
+    height: 150px;
+    background:#1e1e1e
+}
+
+.book{
+    width: 125px;
+    height: 160px;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
