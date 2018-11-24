@@ -1,3 +1,5 @@
+// Selectors
+
 document.getElementById('ajax').addEventListener('click',getAllBooks);
 
 // Get Year
@@ -35,6 +37,24 @@ function getAllBooks(){
     }
     xhr.send();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

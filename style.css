@@ -8,9 +8,16 @@
     /* background-color:#00bfff */
 }
 
+
 #best-seller-book{ 
     height: 150px;
     background:#1e1e1e
+}
+.pictures{
+    margin: auto;
+    margin-top: 15px;   
+    width: 300px;
+    height: 500px;
 }
 
 .book{
