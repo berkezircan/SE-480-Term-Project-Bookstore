@@ -61,6 +61,12 @@ $('#main-nav a').on('click', function (e) {
   }
 });
 
+// Slider
+
+$('.carousel').carousel({
+    interval: 3000,
+    pause: 'hover'
+  });
 
 
 
