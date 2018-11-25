@@ -4,13 +4,13 @@
 }
 
 #new-books{
-    min-height:3000px;
+    min-height:2200px;
     /* background-color:#00bfff */
 }
 
 
 #best-seller-book{ 
-    height: 150px;
+    height: 250px;
     background:#1e1e1e
 }
 .pictures{

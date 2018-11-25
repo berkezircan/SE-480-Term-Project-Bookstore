@@ -29,7 +29,7 @@ function getAllBooks(){
                 `
 
                 // Change height of the div
-                $('#best-seller-book').css('height','2000px');
+                $('#best-seller-book').css('height','2100px');
                 // Change Button css
                 $('#ajax').addClass('disabled')
             })
@@ -38,9 +38,28 @@ function getAllBooks(){
     xhr.send();
 }
 
+// Scroolspy
+$('body').scrollspy({ target: '#main-nav' });
+    
+// Add smooth scrolling
+$('#main-nav a').on('click', function (e) {
+  // Check for a hash value
+  if (this.hash !== '') {
+    // Prevent default behavior
+    e.preventDefault();
 
+    // Store hash
+    const hash = this.hash;
 
-
+    // Animate smooth scroll
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 1500, function () {
+      // Add hash to URL after scroll
+      window.location.hash = hash;
+    });
+  }
+});
 
 
 
