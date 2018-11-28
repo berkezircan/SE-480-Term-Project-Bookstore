@@ -53,3 +53,19 @@
     background:url('./Resimler/image3.jpg');
     background-size: cover;
 }
+
+hr{
+    background-color:#2B929A;
+}
+
+.text{
+    background: #D4D3D3;
+    color:#2B929A;
+}
+
+#text1,
+#text2,{
+    font-weight: inherit;
+    
+    
+}

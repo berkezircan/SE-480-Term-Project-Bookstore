@@ -68,9 +68,41 @@ $('.carousel').carousel({
     pause: 'hover'
   });
 
+// Light Box
 
+    // Lightbox Init
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
 
+// News FadeIn and Fade Out Section
 
+let text1 = document.querySelector('#text1');
+let text2 = document.querySelector('#text2');
+let text3 = document.querySelector('#text3');
+
+let counter = true;
+
+const changeText = () => {
+    setInterval(() => {
+        
+        if(counter === true){    
+            text1.textContent = 'Text1';
+            text2.textContent = 'Text2'; 
+            $('.newText').fadeOut().fadeIn();  
+            counter = false;
+        }else{       
+            text1.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, est?';
+            text2.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, est?';
+            $('.newText').fadeOut().fadeIn();
+            counter = true;
+        }
+        
+    },3000)
+}
+
+changeText();
 
 
 
