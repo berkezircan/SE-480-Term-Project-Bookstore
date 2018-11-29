@@ -1,5 +1,7 @@
-// Selectors
+// =============================
+// Includes index.html's javascript issues
 
+// Selectors
 document.getElementById('ajax').addEventListener('click',getAllBooks);
 
 // Get Year
@@ -13,11 +15,15 @@ function getAllBooks(){
     xhr.open("GET","book.json",true);
 
     xhr.onload = function(){
+        // Select table
         let list = document.getElementById('books');
 
         if(this.status === 200){
+            // Parse Array
             const books = JSON.parse(this.responseText);
+            // Traverse On Array
             books.forEach(function(book){
+                // Add Rows
                 list.innerHTML += `
                 <tr>
                     <th scope='row'>${book.id}</th>
@@ -25,7 +31,6 @@ function getAllBooks(){
                     <td>${book.author}</td>
                     <td ><img class="book align-middle" src=${book.cover}  alt=""></td>
                 <tr>
-
                 `
 
                 // Change height of the div
@@ -38,6 +43,7 @@ function getAllBooks(){
     xhr.send();
 }
 
+// =========================================
 // Scroolspy
 $('body').scrollspy({ target: '#main-nav' });
     
@@ -47,10 +53,8 @@ $('#main-nav a').on('click', function (e) {
   if (this.hash !== '') {
     // Prevent default behavior
     e.preventDefault();
-
     // Store hash
     const hash = this.hash;
-
     // Animate smooth scroll
     $('html, body').animate({
       scrollTop: $(hash).offset().top
@@ -61,14 +65,16 @@ $('#main-nav a').on('click', function (e) {
   }
 });
 
+// =================================
 // Slider
-
 $('.carousel').carousel({
     interval: 3000,
     pause: 'hover'
   });
 
-// Light Box
+// ================================
+// Light Box -> Transparan images !
+// Add Cdn first
 
     // Lightbox Init
 $(document).on('click', '[data-toggle="lightbox"]', function (event) {
@@ -76,32 +82,38 @@ $(document).on('click', '[data-toggle="lightbox"]', function (event) {
     $(this).ekkoLightbox();
 });
 
-// News FadeIn and Fade Out Section
+// TODO : Add lightbox for photos
 
+// =========================================
+// News FadeIn and Fade Out Section
 let text1 = document.querySelector('#text1');
 let text2 = document.querySelector('#text2');
-let text3 = document.querySelector('#text3');
 
 let counter = true;
 
 const changeText = () => {
     setInterval(() => {
-        
-        if(counter === true){    
+        if(counter === true){
+            // Text's First Situation    
             text1.textContent = 'Text1';
-            text2.textContent = 'Text2'; 
+            text2.textContent = 'Text2';
+            // Add Effects 
             $('.newText').fadeOut().fadeIn();  
+            // Turn Second
             counter = false;
         }else{       
+            // Text's Second Situation
             text1.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, est?';
             text2.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, est?';
+            // Add Effects
             $('.newText').fadeOut().fadeIn();
+            // Turn First
             counter = true;
         }
         
     },3000)
 }
-
+// Function Call of Pop Up Messages
 changeText();
 
 
