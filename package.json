@@ -1,0 +1,22 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "SE 480 Course Term Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkezircan/SE-480-Term-Project-Bookstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkezircan/SE-480-Term-Project-Bookstore/issues"
+  },
+  "homepage": "https://github.com/berkezircan/SE-480-Term-Project-Bookstore#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}
