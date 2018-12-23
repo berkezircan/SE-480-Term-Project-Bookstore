@@ -37,3 +37,20 @@ UI.prototype.loadAllBooks = function(books){
         `
     })
 }
+
+// Display Error or Success Messages
+UI.prototype.displayMessages = function(message, type) {
+    const cardBody = document.querySelectorAll('.card-body')[0];
+
+    // Alert Div
+    div = document.createElement('div');
+    div.className = `alert alert-${type}`;
+    div.textContent = message;
+
+    cardBody.appendChild(div);
+
+    // Make The Message Popup
+    setTimeout(function(){
+        div.remove();
+    },2000);
+}

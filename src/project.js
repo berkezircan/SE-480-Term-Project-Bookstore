@@ -32,6 +32,7 @@ function addBook(e){
 
     if(title === '' || author === '' || review === ''){
         // Return Error
+        ui.displayMessages('Please fill the all areas', 'danger');
     }
 
     // Add Book with existing name and author also less than 40 character review
@@ -43,7 +44,11 @@ function addBook(e){
         ui.addBookToUI(newBook);
         // Add book to Storage
         storage.addBookToStorage(newBook);
+        // Display Success Message
+        ui.displayMessages('Book is succesfully added', 'success');
     }
+
+    
 
     ui.clearInputs(titleElement, authorElement, reviewElement);
     e.preventDefault();
