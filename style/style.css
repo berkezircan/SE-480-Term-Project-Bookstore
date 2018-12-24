@@ -1,0 +1,67 @@
+.navbar {
+    border-bottom: #008ed6 3px solid;
+    opacity: 0.8;
+}
+
+#new-books{
+    min-height:2200px;
+}
+
+
+#best-seller-book{ 
+    height: 250px;
+    background:#1e1e1e
+}
+.pictures{
+    margin: auto;
+    margin-top: 15px;   
+    width: 300px;
+    height: 500px;
+}
+
+.book{
+    width: 125px;
+    height: 160px;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+.carousel-item{
+    height: 450px;
+
+}
+
+#showcase{
+    margin-top:58px;
+}
+
+.carousel-image-1{
+    background:url('./Resimler/image1.jpg');
+    background-size: cover;
+}
+
+.carousel-image-2{
+    background:url('./Resimler/image2.jpg');
+    background-size: cover;
+}
+
+.carousel-image-3{
+    background:url('./Resimler/image3.jpg');
+    background-size: cover;
+}
+
+hr{
+    background-color:#2B929A;
+}
+
+.text{
+    background: #D4D3D3;
+    color:#2B929A;
+}
+
+#text1,
+#text2,{
+    font-weight: inherit;
+}
