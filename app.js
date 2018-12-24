@@ -95,16 +95,16 @@ const changeText = () => {
     setInterval(() => {
         if(counter === true){
             // Text's First Situation    
-            text1.textContent = 'Text1';
-            text2.textContent = 'Text2';
+            text1.textContent = "Yılmaz Özdil'in yeni kitabı Mustafa Kemal çıktı ";
+            text2.textContent = "Everest Yayınları'ndan çıkan 'Bütün Aşklar Birbirine benzer- Biri Hariç' adlı kitap, ilginç bir aşk konusunu işliyor.";
             // Add Effects 
             $('.newText').fadeOut().fadeIn();  
             // Turn Second
             counter = false;
         }else{       
             // Text's Second Situation
-            text1.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, est?';
-            text2.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, est?';
+            text1.textContent = "Gazeteci İsrafil Baran, Kapadokya’da asırlar boyu dilden dile dolaşan efsaneleri 'Kapadokya Öyküleri' kitabıyla okurlarla buluşturuyor.";
+            text2.textContent = "Füruzan'ın Devlet Tiyatroları'nda yaklaşık 200 kez sahnelenen oyunları, 'Kış Gelmeden ~ Sevda Dolu Bir Yaz' adlı kitapta yazarın elinden çıktığı şekliylle ilk kez bir kitapta bir araya getirildi"
             // Add Effects
             $('.newText').fadeOut().fadeIn();
             // Turn First
