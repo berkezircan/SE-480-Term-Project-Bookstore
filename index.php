@@ -333,25 +333,27 @@ Guy Montag bir itfaiyeciydi. Televizyonun hüküm sürdüğü bu dünyada kitapl
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form action="mail.php" method="post">
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control">
+                  <input type="text" name="name" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control">
+                  <input type="email" name="mail" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea class="form-control"></textarea>
+                  <textarea name="message" class="form-control"></textarea>
                 </div>
-                <button class="btn btn-primary btn-block">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
               </form>
             </div>
           </div>
         </div>
       </div>
+
+  
 
 
 
