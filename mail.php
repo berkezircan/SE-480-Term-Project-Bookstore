@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
     $mail->Body = "You have received an e-mail from: ".$name.".\n\n".$message;
     $mail->AddAddress('berksoft35@gmail.com');
 
-    header('Location: index.php');
+    header('Location: index.html');
 
     $mail->Send();
 }
