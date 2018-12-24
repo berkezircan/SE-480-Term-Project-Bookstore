@@ -5,6 +5,8 @@ const filter = document.querySelector('#filter');
 const titleElement = document.querySelector('#title');
 const authorElement = document.querySelector('#author');
 const reviewElement = document.querySelector('#review');
+const clear = document.getElementById("clear-books");
+
 
 // UI Object
 const ui = new UI();
@@ -20,8 +22,10 @@ function eventListeners(){
     document.addEventListener('DOMContentLoaded', function(){
         let books = storage.getBooksFromStorage();
         ui.loadAllBooks(books);
-        
-    })
+    });
+    secondCardBody.addEventListener('click',deleteReview);
+    clear.addEventListener('click',clearAllBooks);
+
 }
 
 // Add Book
@@ -48,8 +52,29 @@ function addBook(e){
         ui.displayMessages('Book is succesfully added', 'success');
     }
 
-    
-
     ui.clearInputs(titleElement, authorElement, reviewElement);
     e.preventDefault();
 }
+
+// Delete Review
+function deleteReview(e){
+    if(e.target.id === "delete-review"){
+        // Delete From UI call
+        ui.deleteReviewFromUI(e.target);
+        // Delete From Storage call
+        bookTitle = e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
+        storage.clearBookFromStorage(bookTitle);
+        // Success message
+        ui.displayMessages("Delete is completed", "success");
+
+    }
+}
+
+function clearAllBooks(){
+    if(confirm("Are you sure ?")){
+        ui.deleteAllReviewsFromUI();
+        storage.clearAllBooksFromStorage();
+        ui.displayMessages('All Books Deleted','primary');
+    }
+}
+

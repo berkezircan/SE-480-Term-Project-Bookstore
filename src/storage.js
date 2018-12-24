@@ -25,3 +25,20 @@ Storage.prototype.getBooksFromStorage = function() {
 
     return books;
 }
+
+Storage.prototype.clearBookFromStorage = function(bookTitle){
+    let books = this.getBooksFromStorage();
+
+    // splice
+    books.forEach(function(book, index){
+        if(book.title === bookTitle){
+            books.splice(index,1);
+        };
+    });
+
+    localStorage.setItem("books",JSON.stringify(books));
+}
+
+Storage.prototype.clearAllBooksFromStorage = function(){
+    localStorage.removeItem('books');
+}

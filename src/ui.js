@@ -11,6 +11,7 @@ UI.prototype.addBookToUI = function(newBook) {
             <td>${newBook.title}</td>
             <td>${newBook.author}</td>
             <td>${newBook.review}</td>
+            <td><a href = "#" id="delete-review" class="btn btn-primary">Delete Review</a></td>
         </tr>
     `
 }
@@ -32,7 +33,8 @@ UI.prototype.loadAllBooks = function(books){
         <tr>
             <td>${book.title}</td>
             <td>${book.author}</td>
-             <td>${book.review}</td>
+            <td>${book.review}</td>
+            <td><a href = "#" id="delete-review" class="btn btn-primary">Delete Review</a></td>
         </tr>
         `
     })
@@ -53,4 +55,18 @@ UI.prototype.displayMessages = function(message, type) {
     setTimeout(function(){
         div.remove();
     },2000);
+}
+
+// Delete a review
+UI.prototype.deleteReviewFromUI = function(e) {
+    e.parentElement.parentElement.remove();
+}
+
+// Delete All Reviews
+UI.prototype.deleteAllReviewsFromUI = function(){
+    const bookList = document.getElementById('books');
+
+    bookList.innerHTML = '';
+
+    
 }
